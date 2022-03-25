@@ -10,7 +10,8 @@ const client = new Discord.Client({
 })
 
 client.on("ready", () => {
-    console.log();(`logged in as ${client.user.tag}`)
+    console.log();(`logged in as ${client.user.tag}`);
+    bot.user.setActivity("Testing")
 })
 
 client.on("messageCreate", (message) => {
