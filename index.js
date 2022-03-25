@@ -10,7 +10,16 @@ const client = new Discord.Client({
 })
 
 client.on("ready", () => {
-    console.log();(`logged in as ${client.user.tag}`)
+    console.log("Bot is online!")
+})
+
+client.on("messagecreate", (message) => {
+    const prefix = "-"
+    if (!message.content.startsWith(prefix)) return;
+
+    if (message.content === `${prefix}test`) {
+        message.channel.send("your test has worked!")
+    }
 })
 
 client.login(TOKEN)
