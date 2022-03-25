@@ -14,8 +14,8 @@ client.on("ready", () => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "!"){
-        message.reply("Hello World!")
+    if (message.content == "hi"){
+        message.reply("Hello Papi!")
     }
 })
 
